@@ -85,7 +85,7 @@ help(){
 
 removeV2Ray() {
     #卸载V2ray官方脚本
-    bash <(curl -L -s https://install.direct/go.sh) --remove >/dev/null 2>&1
+    bash <(curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove >/dev/null 2>&1
     rm -rf /etc/v2ray >/dev/null 2>&1
     rm -rf /var/log/v2ray >/dev/null 2>&1
 
@@ -193,9 +193,9 @@ updateProject() {
     
     #安装/更新V2ray主程序
     if [[ $NETWORK == 1 ]];then
-        bash <(curl -L -s https://install.direct/go.sh) --source jsdelivr
+        bash <(curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --source jsdelivr
     else
-        bash <(curl -L -s https://install.direct/go.sh)
+        bash <(curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
     fi
 }
 
